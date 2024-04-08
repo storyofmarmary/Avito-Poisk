@@ -1,0 +1,3693 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+        body {
+            padding: 50px;
+            max-width: 700px;
+            width: 700px;
+        }
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+            margin-bottom: 250px;
+        }
+        h1 {
+            margin-top: 0.25rem;
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-3 {
+            width: 25%;
+            float:left;
+        }
+        .col-4 {
+            width: 33.33%;
+            float:left;
+        }
+        .col-12 {
+            width: 100%;
+            float: left;
+        }
+        .param {
+            font-size: 0.875rem;
+            font-weight: normal;
+            word-break: break-word;
+        }
+
+        .color-blocker, .color-critical, .color-major, .color-high {
+            color: #D0021B;
+        }
+
+        .conditions-header {
+            font-size: 0.875rem;
+            font-weight: bold;
+            padding-bottom: 0.25rem;
+        }
+
+        .conditions-data {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .data-row {
+            margin-top: 1rem;
+        }
+
+        .table-steps table {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-steps table td, .table-steps table th {
+            border: 1px solid;
+            padding: 5px 8px;
+        }
+
+        .table-steps img {
+            max-height: 500px;
+        }
+
+        .table-steps {
+            width: 100%;
+        }
+        .table-steps td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+        .table-steps th {
+            font-size: 0.875rem; text-align: left;
+        }
+        .table-steps p {
+            margin-bottom: 0;
+        }
+        .steps ol, .steps ul {
+            margin-bottom: 0;
+            padding-left: 1.125rem;
+        }
+        .steps li {
+            font-size: 0.875rem;
+        }
+
+        .step-action p {
+            display: none;
+        }
+
+        .step-content p.data {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+        .description p{
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+
+        .table-steps img,
+        .description img,
+        .markdown img,
+        .steps img {
+            max-width: 100%;
+        }
+
+        .attachments {vertical-align: top;}
+        .attachments .attachment{width:96px;display:inline-block; margin-right: 8px; vertical-align: top}
+        .attachments .attachment-image{width:96px;height:96px;border-radius:6px;background-size:cover !important;}
+        .attachments .attachment-file{width:96px;height:96px;background:#e9e9e9;border-radius:6px;}
+        .attachments .attachment-file .attachment-extension{display:inline-block; text-decoration:none !important;font-weight:500;color:#000; padding-left: 8px; padding-top: 8px; font-size: 0.75rem;}
+        .attachments .attachment .attachment-filename{width:96px;display:block; text-overflow:ellipsis;white-space:nowrap;margin-top:0.5rem;overflow:hidden;text-decoration:none;color:#656565;font-size:0.625rem;}
+        .attachments .attachment a {text-decoration:none !important;border-bottom: 0;}
+    </style>
+    <link rel="stylesheet" href="https://app.qase.io/assets/main/css/fontawesome.min.css?1712245155">
+</head>
+<body>
+                                <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-2
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поиск работает и дает правильный результат для валидиных запросов</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести валидный запрос в строке поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска. Сайт предлагает подсказки для уточнения запроса</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать [число] объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-5
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по конкретной категории</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Все категории" рядом со строкой поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилось выпадающее окно со всеми категориями объявлений на сайте</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать одну из категорий, нажав на ее название</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления из выбранной категории</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-3
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Сортировка результатов поиска</h1>
+        <div class="description"><p>Объявления в поисковой выдаче сортируются по умолчанию. Проверяем возможность сортировки по категориям "дещевле/дороже/дата" из выпадающего списка над результатами</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести валидный запрос в строке поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска. Сайт предлагает подсказки для уточнения запроса</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку сортировки "По умолчанию" над поисковой выдачей</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился выпадающий список категорий сортировки "дешевле/дороже/по дате"</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать одну из категорий сортировки</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Объявления в поисковой выдаче отсортировались по выбранному принципу</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-16
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Ввод запроса из буфера обмена</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Скопировать текст запроса из браузера или документа</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Установить курсор в строку поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Курсор отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Вставить в строку скопированный текст (с помощью сочетания клавиш или через меню правой кнопки мыши)</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Скопированный тект отобразился в поисковой строке</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-23
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Установка географии поиска</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-ban color-blocker"></i> Blocker</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле выбора города/региона</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась форма выбора города/региона поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать город/регион, введя название в поле ввода</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Во время ввода сайт предложил подсказки города/региона. Город/регион выбран из списка</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В поле "город/регион" отображается выбранное значение</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести валидный запрос в строке поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Искать"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу в выбранном на шаге 2-3 городе/регионе</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-26
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поиск объявлений через установку радиуса поиска</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса с картой</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать на карте любую точку</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Синий символ геопозиции установлен в желаемой точке карты</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать радиус поиска, нажав на одно из значений в меню под картой</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Радиус выбран. На карте вокруг заданной точки отобразилась синяя область, в которой будет осуществлен поиск. Пересчиталось число объявлений, доступных в этой области</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления в выбранном радиусе</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-29
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поиск объявлений через установку района</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать город в поле "Город/Регион"</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус/Район"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса/района</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на вкладку "Районы"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился список районов выбранного ранее города</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать любой район, нажав на чек-поинт рядом с названием</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Рядом с выбранным районом отобразилась галочка в чек-поинте. Пересчиталось число объявлений, доступных в этом районе</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления в выбранном районе</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-45
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поиск объявлений через установку метро</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать город, где есть метро, в поле "Город/Регион"</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус/Район/Метро"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса/района/метро</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на вкладку "Метро"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась карта метро выбранного города</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать станцию метро на карте или путем ввода ее названия в строке поиска станций</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Выбранные станции метро выделились на карте. Пересчиталось число доступных объявлений</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать время пешей доступности до станции, нажав на любое значение в списке под картой метро</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Выбранное значение получило серую заливку. Пересчиталось число доступных объявлений</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">5</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления рядом с выбранной станцией метро</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-9
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по запросу с ошибкой</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести запрос с опечаткой в строке поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, атлнт расправл плечи</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска. Сайт предлагает подсказки для уточнения запроса</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать нопку "Искать"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилосась желтая область с предупреждением "Ничего не нашлось по запросу «атлант расправл плечи». Показаны результаты для «атлант расправил плечи»"</p>
+<p>Появился список объявлений по исправленному системой запросу</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-15
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Одинаковая выдача по запросу из нескольких слов, введенных в разном порядке</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Произвести поиск по запросу из нескольких слов</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, футболка мужская красная</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. Появился список объявлений по введенному запросу</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Снова произвести поиск, изменив порядок слов запроса из шага 1</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, мужская красная футболка</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. Появился такой же список объявлений, как и в шаге 1</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-7
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по полному названию</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать одно из объявлений на сайте, например <a href="https://www.avito.ru/sankt-peterburg/odezhda_obuv_aksessuary/futbolka_manchester_yunayted_2134425209" target="_blank">https://www.avito.ru/sankt-peterburg/odezhda_obuv_aksessuary/futbolka_manchester_yunayted_2134425209</a></li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строку поика полное название выбранного ранее объявления</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, Футболка Манчестер Юнайтед</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В строке поиска отображается введенное название</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Искать"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче есть выбранное ранее объявление</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-8
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по включению (по части названия)</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать одно из объявлений на сайте, например <a href="https://www.avito.ru/sankt-peterburg/odezhda_obuv_aksessuary/futbolka_manchester_yunayted_2134425209" target="_blank">https://www.avito.ru/sankt-peterburg/odezhda_obuv_aksessuary/futbolka_manchester_yunayted_2134425209</a></li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строку поика часть названия выбранного ранее объявления</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, Футболка</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>В строке поиска отображается введенное название</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Искать"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче есть выбранное ранее объявление</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-6
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регистронезависимость поиска</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести запрос в строке поиска строчными буквами</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, гарри поттер и тайная комната</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести запрос в строке поиска прописными буквами</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, ГАРРИ ПОТТЕР И ТАЙНАЯ КОМНАТА</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу - такие же как объявления на шаге 2</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-10
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по запросу, введенному на неправильной раскладке</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строке поиска запрос на неправильной раскладке</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, ufhhb gjnnth b rjvyfnf (гарри поттер и комната)</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась желтая область с предупреждением "Ничего не нашлось по запросу «ufhhb gjnnth b rjvyfnf». Показаны результаты для «гарри поттер и комната»". </p>
+<p>Система исправила раскладку и осуществила поиск по запросу в правильной раскладке</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-11
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Осуществляется поиск по запросу с открывающими и закрывающими пробелами</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строке поиска запрос с пробелами в начале и с пробелами в конце</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу - система проигнорировала лишние открывающие и закрывающие пробелы</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-21
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Пустая поисковая выдача, если по запросу ничего не найдено</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать запрос, объявлений по которому нет на сайте</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строке поиска запрос</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Искать"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась ошибка и предложение для пользователя о дальнейших действиях:</p>
+<p>"Ничего не найдено в выбранной области поиска</p>
+<ul>
+<li>Выберите другую область поиска</li>
+<li>Задайте запрос по-другому или установите более мягкие ограничения.</li>
+<li>Подпишитесь на обновления, и мы уведомим вас, когда объявления появятся.</li>
+</ul></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-32
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи путем установки категории</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести валидный запрос в строке поиска</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска.</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче появились объявления по введенному запросу</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать категорию поиска, нажав на нее</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поисковая выдача изменилась: показаны только те объявления, которые относятся к выбранной категории</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-33
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поиск при отсутствие результатов в выбранной категории</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Выбрать и установить одну из категорий поиска</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести в строке поиска запрос, не соответствующий категории</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Например, гарри поттер в выбранной заранее категории "Автобусы"</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенный запрос отображается в строке поиска</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Найти"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась желтая область с предупреждением "Ничего не нашлось в категории «Автобусы». Показаны результаты из всех категорий"</p>
+<p>Поиск осуществлен по всем категориям сайта</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-34
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи путем установки радиуса поиска</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса с картой</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать на карте любую точку</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Синий символ геопозиции установлен в желаемой точке карты</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать радиус поиска, нажав на одно из значений в меню под картой</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Радиус выбран. На карте вокруг заданной точки отобразилась синяя область, в которой будет осуществлен поиск. Пересчиталось число объявлений, доступных в этой области</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поисковая выдача изменилась. По введенном ранее запросу остались только объявления в установленном радиусе</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-35
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи путем установки станции метро</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу в городе, где есть метрополитен</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус/Район/Метро"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса/района/метро</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на вкладку "Метро"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появилась карта метро выбранного города</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать станцию метро на карте или путем ввода ее названия в строке поиска станций</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Выбранные станции метро выделились на карте. Пересчиталось число доступных объявлений</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поисковая выдача изменилась. По введенном ранее запросу остались только объявления рядом с выбранными станциями метро</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-36
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи путем установки района</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на поле "Радиус/Район"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась форма установки радиуса/района</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Перейти на вкладку "Районы"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Появился список районов выбранного ранее города</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">3</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Выбрать любой район, нажав на чек-поинт рядом с названием</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Рядом с выбранным районом отобразилась галочка в чек-поинте. Пересчиталось число объявлений, доступных в этом районе</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">4</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поисковая выдача изменилась. По введенном ранее запросу остались только объявления в выбранном районе</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-39
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи с помощью чек-поинта &quot;Только в названиях&quot;</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на чек-поинт "Только в названиях" над поисковой выдачей</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Отобразилась галочка в чек-поинте. Пересчиталось число объявлений: отображаются объявления с запросом только в названии</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-41
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи с помощью поля &quot;Цена&quot;</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ввести валидные значения в полях "Цена"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Только цифры</p></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Введенное значение отобразилось в полях "Цена". Пересчиталось число достпуных объявлений</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче остались только объявления, попадаюие в установленный ценовой диапазон</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-42
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Регулирование поисковой выдачи с чек-поинта &quot;С Авито доставкой&quot;</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на чек-поинт "С Авито доставкой"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Отобразилась галочка в чек-поинте. Пересчиталось число доступных объявлений</p></td>
+</tr>
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">2</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать кнопку "Показать N объявлений"</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Поиск осуществлен. В поисковой выдаче остались только объявления, для которых доступна Авито доставка</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-43
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Просмотр объявлений на карте</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку карты (квадрат со значком геолокации слева от поисковой выдачи)</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Открылась карта, на которой установлены геопозиции всех объявлений из поисковой выдачи</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-37
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Установка вида отображения поисковой выдачи</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><ol>
+<li>Перейти на сайт <a href="https://www.avito.ru/" target="_blank">https://www.avito.ru/</a></li>
+<li>Осуществить поиск по любому валидному запросу</li>
+</ol></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                                            <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                                    <div class="case-steps-case mt-4">
+                                <div class="steps">
+                                    <table class="table-steps" cellpadding="0" cellspacing="0">
+                                                                                    <tr><td style="border-bottom:none;" colspan="2"></td></tr>
+<tr>
+    <td>Step</td>
+    <td style="font-size: 0.875rem;">1</td>
+</tr>
+<tr>
+    <td>Action</td>
+    <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Нажать на кнопку изменения отображения объявлений над поисковой выдачей</p></td>
+</tr>
+    <tr>
+        <td>Input data</td>
+        <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+    </tr>
+<tr>
+    <td>Expected result</td>
+    <td style="font-size: 0.875rem; word-break: break-all;"><p>Изменился вид отображения объявлений в поисковой выдаче</p></td>
+</tr>
+                                                                            </table>
+                                </div>
+                            </div>
+                                                            </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-17
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поле поиска находится в привычном для пользователя месте</h1>
+        <div class="description"><p>Поле поиска находится на виду в самой верхней части сайта. Его не надо искать</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-double-up color-critical"></i> Critical</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-19
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Поле поиска доступно на любой странице сайта</h1>
+        <div class="description"><p>Поле поиска находится сверху на каждой странице, и пользователю не надо возвращаться на главную страницу сайта</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-angle-up color-major"></i> Major</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-arrow-up color-high"></i> High</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-18
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Наличие маски-подсказки в поле поиска</h1>
+        <div class="description"><p>В поле поиска есть маска "Поиск по объявлениям", которая сразу помогает пользователю понять, что поисковый запрос надо вводить именно в это поле</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-14
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Активация поиска через кнопку Enter на клавиатуре</h1>
+        <div class="description"><p>Поиск можно осуществлять не только путем нажатия кнопку "Найти" на сайте, но и с клавиатуры с помощью кнопки Enter</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            POISKA-20
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Сохранение истории поисковых запросов</h1>
+        <div class="description"><p>Пользователю можно ввести только начало поискового запроса, по которому он уже осуществлял поиск. Система даст подсказку и ускорит работу с сайтом</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Not set</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Manual
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">Actual</span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+            </body>
+</html>
